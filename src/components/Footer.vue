@@ -1,0 +1,30 @@
+<template>
+  <footer class="footer">
+    <div class="contenido_footer">
+      <p class="footer__items">
+        &copy; Brand <span>Code</span> Todos los derechos reservados
+      </p>
+      <p class="footer__items"></p>
+      <div class="redes">
+        <h2 class="footer__items">Siguenos</h2>
+        <div class="icons">
+          <a href="https://www.facebook.com/BrandJS" target="_blank"
+            ><i class="fab fa-facebook" id="fb"></i
+          ></a>
+          <a href="https://web.whatsapp.com/" target="_blank"
+            ><i class="fab fa-whatsapp" id="wp"></i
+          ></a>
+          <a href="https://www.instagram.com/_brandcode/" target="_blank"
+            ><i class="fab fa-instagram" id="ig"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script>
+export default {
+  name: "Footer",
+};
+</script>

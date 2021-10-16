@@ -1,18 +1,561 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Header />
+  <Menu />
+  <Nosotros />
+  <Contacto />
+  <Footer />
 </template>
 
+
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Header from "@/components/Header";
+import Menu from "@/components/Menu";
+import Nosotros from "@/components/Nosotros";
+import Contacto from "@/components/Contacto";
+import Footer from "@/components/Footer";
 
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
+    Header,
+    Menu,
+    Nosotros,
+    Contacto,
+    Footer,
+  },
+};
+</script>
+
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: aliceblue;
+}
+
+.iconoxd {
+  color: rgb(255, 133, 19);
+}
+/************* menu responsive **************/
+.menu {
+  height: 120px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #201d1d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #000000,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    #0e0b06
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid rgb(255, 133, 19);
+}
+
+.logo {
+  color: #fff;
+  font-size: 35px;
+  padding: 0 80px;
+  font-weight: bold;
+  font-family: "Staatliches", cursive;
+  animation: moverIzquierda 1s ease-in;
+}
+
+.menu_items {
+  display: flex;
+  list-style: none;
+  margin-right: 30px;
+}
+
+.menu_items li {
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+.menu_items a {
+  padding: 7px 13px;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 18px;
+  display: block;
+  text-transform: uppercase;
+}
+.menu_items li a:hover {
+  color: orange;
+  border-bottom: 2px solid #fff;
+}
+.menu_items li:hover,
+li.active {
+  background: rgba(240, 125, 18, 0.5);
+  transition: 0.4s;
+}
+
+.btn_menu {
+  margin-right: 30px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  color: orange;
+}
+
+ul.show {
+  top: 65px;
+}
+
+#carrito i {
+  display: inline-block;
+  color: orange;
+  font-size: 25px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: url(https://images5.alphacoders.com/929/thumb-1920-929456.jpg)
+    no-repeat center;
+  background-size: cover;
+  margin-bottom: 5px;
+}
+
+.main h1 {
+  font-size: 2.5em;
+  font-family: "Hanalei Fill", cursive;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  font-weight: bold;
+  background: #00000028;
+  animation: moverDerecha 1s ease-in;
+}
+.main p {
+  font-size: 1.6em;
+  margin: 40px;
+  letter-spacing: 2px;
+  color: aliceblue;
+  font-weight: bold;
+  background: #00000050;
+  animation: arriba 1s ease-in;
+}
+span {
+  color: orange;
+}
+.carta {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 5px;
+  background: rgb(0, 0, 0);
+  border-left: 1px solid rgb(255, 133, 19);
+  border-bottom: 2px solid rgb(255, 133, 19);
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 24px;
+}
+.container-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: aliceblue;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 10px auto;
+  box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+  border: none;
+  border-left: 2px solid rgb(255, 133, 19);
+  transition: 0.4s;
+}
+.card:hover {
+  box-shadow: -1px 0px 18px 3px rgb(8, 8, 8);
+  font-size: 1.2em;
+}
+.card img {
+  border-radius: 20px;
+}
+.card h2 {
+  margin-top: 10px;
+  color: #ffc500;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.card__items {
+  text-align: center;
+  margin: 20px 10px;
+  color: aliceblue;
+  font-family: "Staatliches", cursive;
+}
+.card__button {
+  padding: 10px;
+  width: 30%;
+  border-radius: 10px;
+  background: #c21500; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffc500,
+    #c21500
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffc500,
+    #c21500
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+  margin-bottom: 10px;
+  color: aliceblue;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 2px;
+}
+
+.card__button:hover {
+  background: #c213009a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffc400b0,
+    #c21300c2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffc400a1,
+    #c21300a8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #191919;
+  border-bottom: 1px solid rgb(255, 133, 19);
+}
+.phones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 10px;
+  background: rgb(255, 133, 38);
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.9);
+  border-left: 1px solid aliceblue;
+  animation: arriba 1s ease-in;
+  transition: 0.3s;
+}
+.phones:hover {
+  background: rgb(251, 155, 28);
+  font-size: 1.5em;
+}
+
+.phones h3 {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.phones p {
+  margin: 10px;
+}
+.logos1 i {
+  margin: 10px 10px;
+  font-size: 25px;
+}
+.piza {
+  color: orange;
+}
+.beer {
+  color: rgb(207, 181, 32);
+}
+.ice {
+  color: lightblue;
+}
+.nosotros {
+  text-align: justify;
+  width: 100%;
+  background: aliceblue;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background: #191919;
+}
+.n2 {
+  margin: 10px 15px;
+  font-size: 25px;
+  animation: moverDerecha 1s ease-in;
+}
+.np {
+  margin-top: 5px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  animation: moverIzquierda 1s ease-in;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  margin-top: auto;
+  height: 200px;
+  font-family: "Staatliches", cursive;
+  animation: moverIzquierda 1s ease-in;
+}
+.footer__items {
+  color: rgb(207, 207, 207);
+  flex-grow: 1;
+}
+.redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.redes h2 {
+  font-size: 18px;
+  color: rgba(255, 145, 0, 0.829);
+}
+.icons {
+  font-size: 25px;
+  transition: 0.4s all;
+}
+#fb {
+  color: rgb(62, 111, 218);
+  margin: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 1.2em;
+  transition: 0.2s;
+}
+#wp {
+  color: rgb(14, 214, 14);
+  margin: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 1.2em;
+  transition: 0.2s;
+}
+
+#ig {
+  color: #fc466b;
+  border-radius: 2px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 1.2em;
+  transition: 0.2s;
+}
+#fb:hover {
+  border-radius: 50%;
+  font-size: 1.5em;
+}
+#wp:hover {
+  border-radius: 50%;
+  font-size: 1.5em;
+}
+#ig:hover {
+  border-radius: 50%;
+  font-size: 1.5em;
+}
+.dolar {
+  color: rgb(18, 144, 18);
+  font-weight: bold;
+  font-size: 1em;
+}
+@keyframes moverIzquierda {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
-</script>
+@keyframes moverDerecha {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes arriba {
+  0% {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    margin: 20px 20px;
+  }
+  .contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .logo {
+    font-size: 30px;
+    padding-left: 35px;
+  }
+  .menu_items li a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 858px) {
+  .menu {
+    height: 65px;
+  }
+  .btn_menu {
+    display: inline-flex;
+  }
+  .menu_items {
+    position: fixed;
+    width: 75%;
+    height: 63%;
+    background: #131313ed;
+    top: -100vh;
+    text-align: center;
+    transition: all 0.4s;
+    flex-direction: column;
+  }
+  .menu_items {
+    padding-top: 10px;
+  }
+  .menu_items li:hover {
+    background: none;
+  }
+  .menu_items li a {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 20px;
+    border-bottom: 1px solid rgb(251, 155, 28);
+  }
+  .menu_items li a:hover {
+    color: orange;
+  }
+  .logo {
+    font-size: 25px;
+    padding-left: 25px;
+  }
+  .container-card .card {
+    margin: 15px;
+  }
+  .redes {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 858px) and (orientation: landscape) {
+  .menu_items li {
+    margin: 5px 0 0 0;
+  }
+  .menu_items {
+    overflow: scroll;
+    height: calc(100% - 120px);
+  }
+  .redes {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card {
+    margin: 20px 20px;
+  }
+  .contacto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 400px;
+  }
+  .phones {
+    height: 300px;
+    margin: auto;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .contenido_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+}
+</style>
