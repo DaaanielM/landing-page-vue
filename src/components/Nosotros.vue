@@ -15,7 +15,6 @@
       sit amet consectetur adipisicing elit. Animi, rem Lorem ipsum dolor sit
       amet consectetur adipisicing elit.
       <br />
-      <br />
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
       adipisci expedita libero ratione, et eius Lorem ipsum, dolor sit amet
       consectetur adipisicing elit. Animi, rem Lorem ipsum dolor sit amet
@@ -25,19 +24,7 @@
       magni? Quam ea eos soluta? Possimus nemo distinctio ex dolorem veniam,
       nesciunt nam cumque sit architecto consectetur labore sint. Lorem ipsum
       dolor si amet consectetur, adipisicing elit. Fuga placeat libero, animi
-      exercitatione
-      <br />
-      <br />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-      adipisci expedita libero ratione, et eius Lorem ipsum, dolor sit amet
-      consectetur adipisicing elit. Animi, rem Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Temporibus adipisci et eius Lorem ipsum, dolor sit.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit eius iure
-      magni? Quam ea eos soluta? Possimus nemo distinctio ex dolorem veniam,
-      nesciunt nam cumque sit architecto consectetur labore sint. Lorem ipsum
-      dolor si amet consectetur, adipisicing elit. Fuga placeat libero, animi
-      exercitatione
+      exercitatione.
     </p>
   </div>
 </template>

@@ -27,6 +27,7 @@ export default {
 
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Roboto+Slab:wght@300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&family=Teko&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
@@ -176,7 +177,8 @@ span {
 .container-card {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   background: aliceblue;
 }
 
@@ -200,11 +202,11 @@ span {
   border-radius: 20px;
   border: none;
   border-left: 2px solid rgb(255, 133, 19);
-  transition: 0.4s;
+  transition: transform 200ms ease-in-out;
 }
 .card:hover {
+  transform: scale(1.05);
   box-shadow: -1px 0px 18px 3px rgb(8, 8, 8);
-  font-size: 1.2em;
 }
 .card img {
   border-radius: 20px;
@@ -287,6 +289,7 @@ span {
   border-left: 1px solid aliceblue;
   animation: arriba 1s ease-in;
   transition: 0.3s;
+  font-family: "Roboto", "sans-serif";
 }
 .phones:hover {
   background: rgb(251, 155, 28);
@@ -325,6 +328,7 @@ span {
   letter-spacing: 2px;
   font-weight: bold;
   background: #191919;
+  font-family: "Roboto", "sans-serif";
 }
 .n2 {
   margin: 10px 15px;
@@ -332,10 +336,9 @@ span {
   animation: moverDerecha 1s ease-in;
 }
 .np {
-  margin-top: 5px;
-  margin-right: 15px;
-  margin-left: 15px;
+  width: 90%;
   margin-bottom: 25px;
+  line-height: 1.8em;
   animation: moverIzquierda 1s ease-in;
 }
 .footer {
